@@ -1,0 +1,194 @@
+/* Global Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #360B5C, #3FE294); /* Main Gradient */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Prevent body scrolling */
+}
+
+/* Social Card Container */
+.social-card {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%; /* Adjust to fit smaller screens */
+  max-width: 400px; /* Limit size on larger screens */
+  max-height: 80vh; /* Prevent card from exceeding viewport height */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+/* ----------------- Styled Scrollbar ----------------- */
+.social-card {
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+  scrollbar-color: #4790d1 rgba(255, 255, 255, 0.1); /* Thumb and track colors */
+}
+
+.social-card::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.social-card::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Track color */
+  border-radius: 10px; /* Rounded edges for track */
+}
+
+.social-card::-webkit-scrollbar-thumb {
+  background: #3FE294; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded edges for thumb */
+}
+
+.social-card::-webkit-scrollbar-thumb:hover {
+  background: #2DAD72; /* Darker thumb color on hover */
+}
+
+/* Title Styles */
+.social-card h1 {
+  color: #541E7A; /* Vibrant Violet */
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+/* Accordion Container */
+.accordion {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Accordion Item Styles */
+.accordion-item {
+  margin-bottom: 15px;
+}
+
+/* Accordion Header */
+.accordion-header {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: left;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Accordion Content */
+.accordion-content {
+  background: white; /* Neutral background for contrast */
+  color: black;
+  padding: 0 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  max-height: 0; /* Collapsed by default */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* Open State for Accordion Content */
+.accordion-item.open .accordion-content {
+  max-height: 500px; /* Adjust as needed */
+  padding: 10px; /* Add padding when open */
+}
+
+/* ---------------- Section-Specific Styles ---------------- */
+/* General Section */
+.accordion-item.general .accordion-header {
+  background: #360B5C; /* Russian Violet */
+  color: white;
+}
+
+.accordion-item.general .accordion-content {
+  background: #541E7A; /* Lighter Violet */
+  color: white;
+}
+
+/* Hobbies Section */
+.accordion-item.hobbies .accordion-header {
+  background: #292D59; /* Space Cadet */
+  color: white;
+}
+
+.accordion-item.hobbies .accordion-content {
+  background: #3D4472; /* Lighter Space Cadet */
+  color: white;
+}
+
+/* Fun Facts Section */
+.accordion-item.fun-facts .accordion-header {
+  background: #1B4F56; /* Midnight Green */
+  color: white;
+}
+
+.accordion-item.fun-facts .accordion-content {
+  background: #336C76; /* Lighter Midnight Green */
+  color: white;
+}
+
+/* Projects Section */
+.accordion-item.projects .accordion-header {
+  background: #0E7153; /* Dark Spring Green */
+  color: white;
+}
+
+.accordion-item.projects .accordion-content {
+  background: #259168; /* Lighter Spring Green */
+  color: white;
+}
+
+/* Socials Section */
+.accordion-item.socials .accordion-header {
+  background: #1AAD66; /* Sea Green */
+  color: white;
+}
+
+.accordion-item.socials .accordion-content {
+  background: #259168; /* Slightly Darker Sea Green */
+  color: white;
+}
+
+/* New Fact Button */
+#new-fact-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #3FE294; /* Vibrant Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+#new-fact-btn:hover {
+  background: #2DAD72; /* Darker Green */
+}
+
+/* ---------------- Responsive Design ---------------- */
+@media (max-width: 600px) {
+  /* Adjust card size for phones */
+  .social-card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  /* Reduce font sizes */
+  .social-card h1 {
+    font-size: 20px;
+  }
+
+  .accordion-header {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .accordion-content {
+    font-size: 14px;
+    padding: 0 8px;
+  }
+}
